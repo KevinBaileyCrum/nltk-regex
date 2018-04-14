@@ -7,7 +7,9 @@ import argparse, re, nltk
 
 def get_words(pos_sent):
     # Your code goes here
-    pass
+    reg_str = r"([\.A-z]+)(?=\/)"
+    matches = re.findall(reg_str, pos_sent)
+    return matches
 
 def get_noun_phrase(pos_sent):
     # Penn Tagset
