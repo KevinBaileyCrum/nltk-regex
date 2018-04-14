@@ -6,18 +6,23 @@ import argparse, re, nltk
 # https://www.debuggex.com/
 
 def get_words(pos_sent):
-    # Your code goes here
     reg_str = r"([\.A-z]+)(?=\/)"
     matches = re.findall(reg_str, pos_sent)
     return matches
 
 def get_noun_phrase(pos_sent):
-    # Penn Tagset
+    # Matches noun_phrase(s) using the Penn Tagset
     # Adjetive can be JJ,JJR,JJS
     # Noun can be NN,NNS,NNP,NNPS
+    # Parses phrase. calls get_words to return tokens as words
+    print('in get_noun_phrase')
 
-    # Your code goes here
-    pass
+    #words = get_words(pos_sent)
+    ADJC = r"(JJS|JJR|JJ)"
+    NOUN = r"(NNPS|NNS|NNP|NN)"
+    DETR = r"([A-z]+/DT)"
+    matches = re.findall([ADJC], pos_sent)
+    return matches
 
 def most_freq_noun_phrase(pos_sent_fname):
     # Your code goes here
@@ -38,9 +43,17 @@ if __name__ == '__main__':
 
     pos_sent = """All/DT animals/NNS are/VBP equal/JJ ,/, but/CC some/DT \
     animals/NNS are/VBP more/RBR equal/JJ than/IN others/NNS ./."""
-    print(pos_sent)
-    print(str(get_words(pos_sent)))
-    print(str(get_noun_phrase(pos_sent)))
+
+    pythexab = """ word/thing boo/thang this/DT hot/JJ real/JJR School/NN \
+    Magnolias/NNPS a/JJ a/JJR b/JJS c/NN d/NNS f/NNP z/NNPS """
+    # print(pos_sent)
+    # print(str(get_words(pos_sent)))
+    # print(str(get_noun_phrase(pos_sent)))
+
+    print(pythexab)
+
+    print(str(get_words(pythexab)))
+    print(str(get_noun_phrase(pythexab)))
 
     most_freq_noun_phrase(pos_sent_fname)
 
