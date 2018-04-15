@@ -14,14 +14,22 @@ def get_noun_phrase(pos_sent):
     # Matches noun_phrase(s) using the Penn Tagset
     # Adjetive can be JJ,JJR,JJS
     # Noun can be NN,NNS,NNP,NNPS
+    # ADJC = r"([A-z]+([/])(JJS|JJR|JJ)"
+    # NOUN = r"(NNPS|NNS|NNP|NN)"
+    # DETR = r"([A-z]+/DT)"
     # Parses phrase. calls get_words to return tokens as words
-    print('in get_noun_phrase')
 
-    #words = get_words(pos_sent)
-    ADJC = r"(JJS|JJR|JJ)"
-    NOUN = r"(NNPS|NNS|NNP|NN)"
-    DETR = r"([A-z]+/DT)"
-    matches = re.findall([ADJC], pos_sent)
+    # regex = r"(([A-z]+\/DT)? ([A-z]+\/((JJS)|(JJR)|(JJ)))+ ([A-z]+\/((NNPS)|(NNS)|(NNP)|(NN)))*)"
+
+    pattern = re.compile(r'(?P<NP>(?:\S+/DT\s*)?(?:\S+/JJ\w?\s*)*(?:\S+/NN\w*\s*)+)')
+    matches = re.findall( pattern, pos_sent ) # match patter in regex
+
+    # init list of phrases and use get_words to strip off POS tag
+    phrase_list = []
+    for words in matches:
+        print( words )
+        phrase_list.append( get_words( words ) )
+    print( phrase_list )
     return matches
 
 def most_freq_noun_phrase(pos_sent_fname):
@@ -46,13 +54,13 @@ if __name__ == '__main__':
 
     pythexab = """ word/thing boo/thang this/DT hot/JJ real/JJR School/NN \
     Magnolias/NNPS a/JJ a/JJR b/JJS c/NN d/NNS f/NNP z/NNPS """
-    # print(pos_sent)
+    print(pos_sent)
     # print(str(get_words(pos_sent)))
     # print(str(get_noun_phrase(pos_sent)))
-
+    print("############################################################")
+    print(str(get_noun_phrase(pos_sent)))
+    print("##############################################################")
     print(pythexab)
-
-    print(str(get_words(pythexab)))
     print(str(get_noun_phrase(pythexab)))
 
     most_freq_noun_phrase(pos_sent_fname)
