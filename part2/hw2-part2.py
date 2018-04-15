@@ -80,7 +80,7 @@ def print_other_lexical_rel():
     print("")
 
 if __name__ == '__main__':
-    sys.stdout=open('part2.out','w+')
+    sys.stdout=open('wordnet.txt','w+')
 
     print_syn_lemmas('set')
     print_def_exp(wn.synset("set.n.01"))
