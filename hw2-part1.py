@@ -21,19 +21,24 @@ def get_noun_phrase(pos_sent):
 
     # regex = r"(([A-z]+\/DT)? ([A-z]+\/((JJS)|(JJR)|(JJ)))+ ([A-z]+\/((NNPS)|(NNS)|(NNP)|(NN)))*)"
 
-    pattern = re.compile(r'(?P<NP>(?:\S+/DT\s*)?(?:\S+/JJ\w?\s*)*(?:\S+/NN\w*\s*)+)')
-    matches = re.findall( pattern, pos_sent ) # match patter in regex
+    regex = re.compile(r'((?:\S+/DT\s*)?(?:\S+/JJ\w?\s*)*(?:\S+/NN\w*\s*)+)')
+
+    # regex = re.compile(r'(?:[ A-z]+/DT
+    matches = re.findall( regex, pos_sent ) # match patter in regex
 
     # init list of phrases and use get_words to strip off POS tag
     phrase_list = []
     for words in matches:
-        print( words )
         phrase_list.append( get_words( words ) )
-    print( phrase_list )
-    return matches
+    # combine sublists in phrase_list ( formatting output )
+    phrase_list = [' '.join(words) for words in phrase_list]
+    return phrase_list
 
 def most_freq_noun_phrase(pos_sent_fname):
-    # Your code goes here
+    # open file
+    print(pos_sent_fname)
+    f= open(pos_sent_fname,"r")
+    print( str( get_noun_phrase( f ) ) )
     pass
 
 if __name__ == '__main__':
@@ -51,17 +56,18 @@ if __name__ == '__main__':
 
     pos_sent = """All/DT animals/NNS are/VBP equal/JJ ,/, but/CC some/DT \
     animals/NNS are/VBP more/RBR equal/JJ than/IN others/NNS ./."""
-
-    pythexab = """ word/thing boo/thang this/DT hot/JJ real/JJR School/NN \
-    Magnolias/NNPS a/JJ a/JJR b/JJS c/NN d/NNS f/NNP z/NNPS """
+    print()
     print(pos_sent)
-    # print(str(get_words(pos_sent)))
-    # print(str(get_noun_phrase(pos_sent)))
-    print("############################################################")
+    print()
+    print('1: -------------------------------------------------------')
+    print(str(get_words(pos_sent)))
+    print('   -------------------------------------------------------')
+
+    print('2: -------------------------------------------------------')
     print(str(get_noun_phrase(pos_sent)))
-    print("##############################################################")
-    print(pythexab)
-    print(str(get_noun_phrase(pythexab)))
+    print('   -------------------------------------------------------')
 
+
+    print('3: -------------------------------------------------------')
     most_freq_noun_phrase(pos_sent_fname)
-
+    print('   -------------------------------------------------------')
