@@ -19,11 +19,7 @@ def get_noun_phrase(pos_sent):
     # DETR = r"([A-z]+/DT)"
     # Parses phrase. calls get_words to return tokens as words
 
-    # regex = r"(([A-z]+\/DT)? ([A-z]+\/((JJS)|(JJR)|(JJ)))+ ([A-z]+\/((NNPS)|(NNS)|(NNP)|(NN)))*)"
-
-    regex = re.compile(r'((?:\S+/DT\s*)?(?:\S+/JJ\w?\s*)*(?:\S+/NN\w*\s*)+)')
-
-    # regex = re.compile(r'(?:[ A-z]+/DT
+    regex = (r'((?:\S+\/DT\s*)?(?:\S+\/(?:JJS|JJR|JJ)\s*)*(?:\S+\/(?:NNPS|NNP|NNS|NN)\s*)+)')
     matches = re.findall( regex, pos_sent ) # match patter in regex
 
     # init list of phrases and use get_words to strip off POS tag
@@ -35,10 +31,10 @@ def get_noun_phrase(pos_sent):
     return phrase_list
 
 def most_freq_noun_phrase(pos_sent_fname):
-    # open file
-    print(pos_sent_fname)
-    f= open(pos_sent_fname,"r")
-    print( str( get_noun_phrase( f ) ) )
+    # # open file
+    # print(pos_sent_fname)
+    # f= open(pos_sent_fname,"r")
+    # print( str( get_noun_phrase( f ) ) )
     pass
 
 if __name__ == '__main__':
