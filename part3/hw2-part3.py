@@ -6,6 +6,12 @@ def get_score(review):
 def get_text(review):
     return re.search(r'Text = "(.*)"', review).group(1)
 
+
+def normalize( file_name ):
+    words = [ w.lower() for w in file_name ]
+    print ( words )
+    return words
+
 def process_reviews(file_name):
     file = open(file_name, "rb")
     raw_data = file.read().decode("latin1")
@@ -14,7 +20,7 @@ def process_reviews(file_name):
     positive_texts = []
     negative_texts = []
     first_sent = None
-    for review in re.split(r'\.\n', raw_data):
+    for review in re.split(r'\.\n', raw_data): # parse reviews separated by .
         overall_score = get_score(review)
         review_text = get_text(review)
         if overall_score > 3:
@@ -30,7 +36,9 @@ def process_reviews(file_name):
     # print(len(positive_texts))
     # print(len(negative_texts))
     # Your code goes here
-    pass
+    normalize( positive_texts )
+
+    #print( positive_texts )
 
 # Write to File, this function is just for reference, because the encoding matters.
 def write_file(file_name, data):
@@ -42,3 +50,4 @@ if __name__ == '__main__':
     #filename = sys.argv[1]
     file_name = "restaurant-training.data"
     process_reviews(file_name)
+    print('anythoing')
