@@ -6,6 +6,15 @@ def get_score(review):
 def get_text(review):
     return re.search(r'Text = "(.*)"', review).group(1)
 
+def write_freqDist( category, file_name ):
+    # creates a file 'positve | negative'.txt
+    # writes most common words in descending order to file
+    filename = category+'.txt'
+    f = open( filename, "w+" )
+    fdist = nltk.FreqDist( normalize( file_name ) )
+    f.write( str( fdist.most_common() ) )
+    f.close()
+    pass
 
 def normalize( file_name ):
     # normalize data set to yield more useful data
@@ -24,7 +33,7 @@ def normalize( file_name ):
     regex = re.compile(r'(?:\w)+')
     normalized_words = []
     for w in words:
-        normalized_words.append( re.findall( regex, w ) )
+        normalized_words += ( re.findall( regex, w ) )
 
     return ( normalized_words )
 
@@ -52,8 +61,9 @@ def process_reviews(file_name):
     # print(len(positive_texts))
     # print(len(negative_texts))
     # Your code goes here
-    normalize( positive_texts )
-    normalize( negative_texts )
+    write_freqDist( 'positive', positive_texts )
+    write_freqDist( 'negative', negative_texts )
+    #normalize( negative_texts )
     #print( positive_texts )
 
 # Write to File, this function is just for reference, because the encoding matters.
