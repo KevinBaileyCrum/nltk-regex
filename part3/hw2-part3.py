@@ -12,15 +12,16 @@ def write_condFreqDist( category, file_name ):
     bi = list( nltk.bigrams( file_name ) ) # list of bigrams
     cfdist = nltk.ConditionalFreqDist( bi )
 
-    for i in cfdist:
-        print( cfdist[i] )
-        print( i )
-        print( cfdist[i].most_common() )
+    # junk code trying to format output
+    #space = ' '
+    #for i in cfdist:
+    #    for j in cfdist[i].most_common():
+    #        print( '{} {}'.format( i, j) ),
 
     f = open( filename, "w+" )
-    #f.write( str( cfdist.items.most_common() ) )
+    for i in cfdist:
+        f.write( '{} {}\n'.format( i, cfdist[i].most_common() ) )
     f.close()
-    pass
 
 def write_freqDist( category, file_name ):
     # creates a file 'positve | negative'.txt
@@ -83,6 +84,8 @@ def process_reviews(file_name):
     write_condFreqDist( 'positive', positive_texts )
     write_condFreqDist( 'negative', negative_texts )
 
+    nltk.Text( positive_texts ).collocations()
+    #positive_texts.nltk.collocations()
 # Write to File, this function is just for reference, because the encoding matters.
 def write_file(file_name, data):
     file = open(file_name, 'w', encoding="utf-8")    # or you can say encoding="latin1"
