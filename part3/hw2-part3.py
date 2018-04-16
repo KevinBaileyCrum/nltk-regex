@@ -6,6 +6,7 @@ def get_score(review):
 def get_text(review):
     return re.search(r'Text = "(.*)"', review).group(1)
 
+
 def write_condFreqDist( category, file_name ):
     filename = category+'-bigram-freq.txt'
 
@@ -84,7 +85,9 @@ def process_reviews(file_name):
     write_condFreqDist( 'positive', positive_texts )
     write_condFreqDist( 'negative', negative_texts )
     # print collocations to std.out
+    print( 'positive collocations' )
     nltk.Text( positive_texts ).collocations()
+    print( 'negative collocations' )
     nltk.Text( negative_texts ).collocations()
 
 
