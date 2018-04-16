@@ -1,0 +1,230 @@
+1. Synsets and Lemmas
+Word: set
+
+Synsets:
+Synset('set.n.01')
+Synset('set.n.02')
+Synset('set.n.03')
+Synset('stage_set.n.01')
+Synset('set.n.05')
+Synset('bent.n.01')
+Synset('set.n.07')
+Synset('set.n.08')
+Synset('hardening.n.02')
+Synset('set.n.10')
+Synset('set.n.11')
+Synset('set.n.12')
+Synset('set.n.13')
+Synset('put.v.01')
+Synset('determine.v.03')
+Synset('specify.v.02')
+Synset('set.v.04')
+Synset('set.v.05')
+Synset('set.v.06')
+Synset('fix.v.12')
+Synset('set.v.08')
+Synset('set.v.09')
+Synset('set.v.10')
+Synset('arrange.v.06')
+Synset('plant.v.01')
+Synset('set.v.13')
+Synset('jell.v.01')
+Synset('typeset.v.01')
+Synset('set.v.16')
+Synset('set.v.17')
+Synset('set.v.18')
+Synset('sic.v.01')
+Synset('place.v.11')
+Synset('rig.v.04')
+Synset('set_up.v.04')
+Synset('adjust.v.01')
+Synset('fructify.v.03')
+Synset('dress.v.16')
+Synset('fit.s.02')
+Synset('fixed.s.02')
+Synset('located.s.01')
+Synset('laid.s.01')
+Synset('set.s.05')
+Synset('determined.s.04')
+Synset('hardened.s.05')
+
+First synset: Synset('set.n.01')
+
+Lemma names: 
+set
+
+Last lemmas: Lemma('set.n.01.set')
+
+Synset of Last lemmas: Synset('set.n.01')
+
+Synset('set.n.01'): lemma_name['set']
+Synset('set.n.02'): lemma_name['set']
+Synset('set.n.03'): lemma_name['set', 'exercise_set']
+Synset('stage_set.n.01'): lemma_name['stage_set', 'set']
+Synset('set.n.05'): lemma_name['set', 'circle', 'band', 'lot']
+Synset('bent.n.01'): lemma_name['bent', 'set']
+Synset('set.n.07'): lemma_name['set']
+Synset('set.n.08'): lemma_name['set']
+Synset('hardening.n.02'): lemma_name['hardening', 'solidifying', 'solidification', 'set', 'curing']
+Synset('set.n.10'): lemma_name['Set', 'Seth']
+Synset('set.n.11'): lemma_name['set']
+Synset('set.n.12'): lemma_name['set', 'readiness']
+Synset('set.n.13'): lemma_name['set']
+Synset('put.v.01'): lemma_name['put', 'set', 'place', 'pose', 'position', 'lay']
+Synset('determine.v.03'): lemma_name['determine', 'set']
+Synset('specify.v.02'): lemma_name['specify', 'set', 'determine', 'define', 'fix', 'limit']
+Synset('set.v.04'): lemma_name['set', 'mark']
+Synset('set.v.05'): lemma_name['set']
+Synset('set.v.06'): lemma_name['set']
+Synset('fix.v.12'): lemma_name['fix', 'prepare', 'set_up', 'ready', 'gear_up', 'set']
+Synset('set.v.08'): lemma_name['set']
+Synset('set.v.09'): lemma_name['set', 'localize', 'localise', 'place']
+Synset('set.v.10'): lemma_name['set', 'go_down', 'go_under']
+Synset('arrange.v.06'): lemma_name['arrange', 'set']
+Synset('plant.v.01'): lemma_name['plant', 'set']
+Synset('set.v.13'): lemma_name['set']
+Synset('jell.v.01'): lemma_name['jell', 'set', 'congeal']
+Synset('typeset.v.01'): lemma_name['typeset', 'set']
+Synset('set.v.16'): lemma_name['set']
+Synset('set.v.17'): lemma_name['set', 'countersink']
+Synset('set.v.18'): lemma_name['set']
+Synset('sic.v.01'): lemma_name['sic', 'set']
+Synset('place.v.11'): lemma_name['place', 'put', 'set']
+Synset('rig.v.04'): lemma_name['rig', 'set', 'set_up']
+Synset('set_up.v.04'): lemma_name['set_up', 'lay_out', 'set']
+Synset('adjust.v.01'): lemma_name['adjust', 'set', 'correct']
+Synset('fructify.v.03'): lemma_name['fructify', 'set']
+Synset('dress.v.16'): lemma_name['dress', 'arrange', 'set', 'do', 'coif', 'coiffe', 'coiffure']
+Synset('fit.s.02'): lemma_name['fit', 'primed', 'set']
+Synset('fixed.s.02'): lemma_name['fixed', 'set', 'rigid']
+Synset('located.s.01'): lemma_name['located', 'placed', 'set', 'situated']
+Synset('laid.s.01'): lemma_name['laid', 'set']
+Synset('set.s.05'): lemma_name['set']
+Synset('determined.s.04'): lemma_name['determined', 'dictated', 'set']
+Synset('hardened.s.05'): lemma_name['hardened', 'set']
+
+Lemmas of set:
+Lemma('set.n.01.set')
+Lemma('set.n.02.set')
+Lemma('set.n.03.set')
+Lemma('stage_set.n.01.set')
+Lemma('set.n.05.set')
+Lemma('bent.n.01.set')
+Lemma('set.n.07.set')
+Lemma('set.n.08.set')
+Lemma('hardening.n.02.set')
+Lemma('set.n.10.Set')
+Lemma('set.n.11.set')
+Lemma('set.n.12.set')
+Lemma('set.n.13.set')
+Lemma('put.v.01.set')
+Lemma('determine.v.03.set')
+Lemma('specify.v.02.set')
+Lemma('set.v.04.set')
+Lemma('set.v.05.set')
+Lemma('set.v.06.set')
+Lemma('fix.v.12.set')
+Lemma('set.v.08.set')
+Lemma('set.v.09.set')
+Lemma('set.v.10.set')
+Lemma('arrange.v.06.set')
+Lemma('plant.v.01.set')
+Lemma('set.v.13.set')
+Lemma('jell.v.01.set')
+Lemma('typeset.v.01.set')
+Lemma('set.v.16.set')
+Lemma('set.v.17.set')
+Lemma('set.v.18.set')
+Lemma('sic.v.01.set')
+Lemma('place.v.11.set')
+Lemma('rig.v.04.set')
+Lemma('set_up.v.04.set')
+Lemma('adjust.v.01.set')
+Lemma('fructify.v.03.set')
+Lemma('dress.v.16.set')
+Lemma('fit.s.02.set')
+Lemma('fixed.s.02.set')
+Lemma('located.s.01.set')
+Lemma('laid.s.01.set')
+Lemma('set.s.05.set')
+Lemma('determined.s.04.set')
+Lemma('hardened.s.05.set')
+
+
+2. Definitions and Examples
+Synset: Synset('set.n.01')
+Definition: a group of things of the same kind that belong together and are so used
+
+Example: ['a set of books', 'a set of golf clubs', 'a set of teeth']
+
+Synsets of first lemma set: 
+Synset('set.n.01') : definition ( a group of things of the same kind that belong together and are so used)
+Synset('set.n.02') : definition ( (mathematics) an abstract collection of numbers or symbols)
+Synset('set.n.03') : definition ( several exercises intended to be done in series)
+Synset('stage_set.n.01') : definition ( representation consisting of the scenery and other properties used to identify the location of a dramatic production)
+Synset('set.n.05') : definition ( an unofficial association of people or groups)
+Synset('bent.n.01') : definition ( a relatively permanent inclination to react in a particular way)
+Synset('set.n.07') : definition ( the act of putting something in position)
+Synset('set.n.08') : definition ( a unit of play in tennis or squash)
+Synset('hardening.n.02') : definition ( the process of becoming hard or solid by cooling or drying or crystallization)
+Synset('set.n.10') : definition ( evil Egyptian god with the head of a beast that has high square ears and a long snout; brother and murderer of Osiris)
+Synset('set.n.11') : definition ( the descent of a heavenly body below the horizon)
+Synset('set.n.12') : definition ( (psychology) being temporarily ready to respond in a particular way)
+Synset('set.n.13') : definition ( any electronic equipment that receives or transmits radio or tv signals)
+Synset('put.v.01') : definition ( put into a certain place or abstract location)
+Synset('determine.v.03') : definition ( fix conclusively or authoritatively)
+Synset('specify.v.02') : definition ( decide upon or fix definitely)
+Synset('set.v.04') : definition ( establish as the highest level or best performance)
+Synset('set.v.05') : definition ( put into a certain state; cause to be in a certain state)
+Synset('set.v.06') : definition ( fix in a border)
+Synset('fix.v.12') : definition ( make ready or suitable or equip in advance for a particular purpose or for some use, event, etc)
+Synset('set.v.08') : definition ( set to a certain position or cause to operate correctly)
+Synset('set.v.09') : definition ( locate)
+Synset('set.v.10') : definition ( disappear beyond the horizon)
+Synset('arrange.v.06') : definition ( adapt for performance in a different way)
+Synset('plant.v.01') : definition ( put or set (seeds, seedlings, or plants) into the ground)
+Synset('set.v.13') : definition ( apply or start)
+Synset('jell.v.01') : definition ( become gelatinous)
+Synset('typeset.v.01') : definition ( set in type)
+Synset('set.v.16') : definition ( put into a position that will restore a normal state)
+Synset('set.v.17') : definition ( insert (a nail or screw below the surface, as into a countersink))
+Synset('set.v.18') : definition ( give a fine, sharp edge to a knife or razor)
+Synset('sic.v.01') : definition ( urge to attack someone)
+Synset('place.v.11') : definition ( estimate)
+Synset('rig.v.04') : definition ( equip with sails or masts)
+Synset('set_up.v.04') : definition ( get ready for a particular purpose or event)
+Synset('adjust.v.01') : definition ( alter or regulate so as to achieve accuracy or conform to a standard)
+Synset('fructify.v.03') : definition ( bear fruit)
+Synset('dress.v.16') : definition ( arrange attractively)
+Synset('fit.s.02') : definition ( (usually followed by `to' or `for') on the point of or strongly disposed)
+Synset('fixed.s.02') : definition ( fixed and unmoving)
+Synset('located.s.01') : definition ( situated in a particular spot or position)
+Synset('laid.s.01') : definition ( set down according to a plan:"a carefully laid table with places set for four people")
+Synset('set.s.05') : definition ( being below the horizon)
+Synset('determined.s.04') : definition ( determined or decided upon as by an authority)
+Synset('hardened.s.05') : definition ( converted to solid form (as concrete))
+
+
+3. Lexical Relations
+Synset: Synset('set.n.01')
+
+Hypernyms: [Synset('collection.n.01')]
+
+Hyponyms: [Synset('bracket.n.01'), Synset('chess_set.n.01'), Synset('choir.n.02'), Synset('conjugation.n.03'), Synset('core.n.01'), Synset('dentition.n.02'), Synset('field.n.12'), Synset('field.n.13'), Synset('field.n.15'), Synset('intersection.n.04'), Synset('manicure_set.n.01'), Synset('octet.n.03'), Synset('pair.n.01'), Synset('portfolio.n.02'), Synset('quartet.n.03'), Synset('quintet.n.04'), Synset('score.n.04'), Synset('septet.n.03'), Synset('sextet.n.04'), Synset('singleton.n.02'), Synset('suite.n.04'), Synset('synset.n.01'), Synset('threescore.n.01'), Synset('trio.n.04'), Synset('union.n.08')]
+
+Root hypernyms: [Synset('entity.n.01')]
+
+Hypernym path length of Synset('set.n.01') = 1 
+
+Path[0]:
+entity.n.01
+abstraction.n.06
+group.n.01
+collection.n.01
+set.n.01
+
+
+Antonyms of 'good': [Lemma('bad.a.01.bad')]
+
+Entailment of 'walk': [Synset('step.v.01')]
+
