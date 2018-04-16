@@ -83,9 +83,11 @@ def process_reviews(file_name):
     # find condFreqDist and write to file
     write_condFreqDist( 'positive', positive_texts )
     write_condFreqDist( 'negative', negative_texts )
-
+    # print collocations to std.out
     nltk.Text( positive_texts ).collocations()
-    #positive_texts.nltk.collocations()
+    nltk.Text( negative_texts ).collocations()
+
+
 # Write to File, this function is just for reference, because the encoding matters.
 def write_file(file_name, data):
     file = open(file_name, 'w', encoding="utf-8")    # or you can say encoding="latin1"
