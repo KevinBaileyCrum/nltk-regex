@@ -6,15 +6,30 @@ def get_score(review):
 def get_text(review):
     return re.search(r'Text = "(.*)"', review).group(1)
 
+def write_condFreqDist( category, file_name ):
+    filename = category+'-bigram-freq.txt'
+
+    bi = list( nltk.bigrams( file_name ) ) # list of bigrams
+    cfdist = nltk.ConditionalFreqDist( bi )
+
+    for i in cfdist:
+        print( cfdist[i] )
+        print( i )
+        print( cfdist[i].most_common() )
+
+    f = open( filename, "w+" )
+    #f.write( str( cfdist.items.most_common() ) )
+    f.close()
+    pass
+
 def write_freqDist( category, file_name ):
     # creates a file 'positve | negative'.txt
     # writes most common words in descending order to file
-    filename = category+'.txt'
+    filename = category+'-unigram-freq.txt'
     f = open( filename, "w+" )
-    fdist = nltk.FreqDist( normalize( file_name ) )
+    fdist = nltk.FreqDist( file_name )
     f.write( str( fdist.most_common() ) )
     f.close()
-    pass
 
 def normalize( file_name ):
     # normalize data set to yield more useful data
@@ -58,13 +73,15 @@ def process_reviews(file_name):
                 first_sent = sent[0]
 
     # There are 150 positive reviews and 150 negative reviews.
-    # print(len(positive_texts))
-    # print(len(negative_texts))
-    # Your code goes here
+    # normalize data
+    positive_texts = normalize( positive_texts )
+    negative_texts = normalize( negative_texts )
+    # find FreqDist and write to file
     write_freqDist( 'positive', positive_texts )
     write_freqDist( 'negative', negative_texts )
-    #normalize( negative_texts )
-    #print( positive_texts )
+    # find condFreqDist and write to file
+    write_condFreqDist( 'positive', positive_texts )
+    write_condFreqDist( 'negative', negative_texts )
 
 # Write to File, this function is just for reference, because the encoding matters.
 def write_file(file_name, data):
