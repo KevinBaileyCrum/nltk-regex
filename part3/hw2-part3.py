@@ -8,9 +8,25 @@ def get_text(review):
 
 
 def normalize( file_name ):
+    # normalize data set to yield more useful data
+    # current implementation is ineffecient as it
+    # iterates through the same list multiple times
+    # could be improved for larger data sets
+
+    # lowercase all tokens
     words = [ w.lower() for w in file_name ]
-    print ( words )
-    return words
+
+    # remove stopwords
+    stop_words = set( nltk.corpus.stopwords.words( 'english' ) )
+    words = [ w for w in words if not w in stop_words ]
+
+    # remove tokens w/o 1+ \w
+    regex = re.compile(r'(?:\w)+')
+    normalized_words = []
+    for w in words:
+        normalized_words.append( re.findall( regex, w ) )
+
+    return ( normalized_words )
 
 def process_reviews(file_name):
     file = open(file_name, "rb")
@@ -37,7 +53,7 @@ def process_reviews(file_name):
     # print(len(negative_texts))
     # Your code goes here
     normalize( positive_texts )
-
+    normalize( negative_texts )
     #print( positive_texts )
 
 # Write to File, this function is just for reference, because the encoding matters.
@@ -50,4 +66,3 @@ if __name__ == '__main__':
     #filename = sys.argv[1]
     file_name = "restaurant-training.data"
     process_reviews(file_name)
-    print('anythoing')
